@@ -1,0 +1,86 @@
+/*
+#include <Windows.h>
+#include <tchar.h>
+#include <string>
+
+#define PIPE_NAME L"\\\\.\\pipe\\RANskrilForegroundPipe"
+
+bool ContainsDialogControls(HWND parent) {
+    HWND hChild = nullptr;
+    bool hasCombo = false;
+    bool hasToolbar = false;
+    bool hasListView = false;
+
+    while ((hChild = FindWindowExW(parent, hChild, nullptr, nullptr)) != nullptr) {
+        WCHAR className[256] = { 0 };
+        GetClassNameW(hChild, className, ARRAYSIZE(className));
+
+        if (_wcsicmp(className, L"ComboBoxEx32") == 0) hasCombo = true;
+        if (_wcsicmp(className, L"ToolbarWindow32") == 0) hasToolbar = true;
+        if (_wcsicmp(className, L"SysListView32") == 0) hasListView = true;
+
+        // Recurse into child windows
+        if (!hasCombo || !hasToolbar || !hasListView) {
+            if (ContainsDialogControls(hChild)) {
+                // Return early if all found in a nested branch
+                return true;
+            }
+        }
+    }
+
+    return hasCombo && hasToolbar && hasListView;
+}
+
+int main() {
+    HWND hwnd = GetForegroundWindow();
+    if (!hwnd) return 1;
+
+    WCHAR className[256] = { 0 };
+    if (!GetClassName(hwnd, className, ARRAYSIZE(className))) return 2;
+
+    DWORD pid = 0;
+    GetWindowThreadProcessId(hwnd, &pid);
+
+    HANDLE hPipe = CreateFileW(
+        PIPE_NAME,
+        GENERIC_WRITE,
+        0,
+        NULL,
+        OPEN_EXISTING,
+        0,
+        NULL
+    );
+
+    if (hPipe == INVALID_HANDLE_VALUE) return 3;
+
+    std::wstring message = L"";
+    if (!pid) {
+		message = L"FAIL -1";
+        goto finale;
+    }
+
+    if (_wcsicmp(className, L"#32770") == 0) {
+        message = L"OK " + std::to_wstring(pid);
+        goto finale;
+    }
+    else if (wcscmp(className, L"Windows.UI.Input.InputSite.WindowClass") == 0) {
+        message = L"OK " + std::to_wstring(pid);
+        goto finale;
+    }
+    else {
+        message = L"FAIL " + std::to_wstring(pid);
+        goto finale;
+    }
+
+finale:
+    if (message.empty()) {
+        message = L"FAIL " + std::to_wstring(pid);
+	}
+
+    DWORD written = 0;
+    WriteFile(hPipe, message.c_str(), static_cast<DWORD>((message.size() + 1) * sizeof(wchar_t)), &written, NULL);
+    CloseHandle(hPipe);
+
+    return 0;
+}
+*/

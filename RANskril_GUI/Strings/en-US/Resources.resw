@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="HomePage_ButtonInfringe.Content" xml:space="preserve">
+    <value>Show Infringing Applications</value>
+  </data>
+  <data name="HomePage_ButtonRestart.Content" xml:space="preserve">
+    <value>Restart to Safe Mode</value>
+  </data>
+  <data name="HomePage_ButtonRearm.Content" xml:space="preserve">
+    <value>Rearm System</value>
+  </data>
+  <data name="HomePage_ButtonEnable.Content" xml:space="preserve">
+    <value>Enable RANskril</value>
+  </data>
+  <data name="MainWindow_NavMenu_Decoys.Content" xml:space="preserve">
+    <value>Decoys</value>
+  </data>
+  <data name="MainWindow_NavMenu_Home.Content" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="MainWindow_NavMenu_Logs.Content" xml:space="preserve">
+    <value>Logs</value>
+  </data>
+  <data name="MainWindow_NavMenu_Recovery.Content" xml:space="preserve">
+    <value>Recovery</value>
+  </data>
+  <data name="HomePage_StatusTextSafe.Text" xml:space="preserve">
+    <value>No anomalies detected! Your computer is safe.</value>
+  </data>
+  <data name="HomePage_StatusTextUnsafe.Text" xml:space="preserve">
+    <value>The system was tripped. Investigate immediately!</value>
+  </data>
+  <data name="HomePage_StatusTextUnknown.Text" xml:space="preserve">
+    <value>RANskril is turned off.</value>
+  </data>
+  <data name="HomePage_ButtonDisable_Content" xml:space="preserve">
+    <value>Disable RANskril</value>
+  </data>
+  <data name="DecoyPage_Title.Text" xml:space="preserve">
+    <value>Decoy Viewer</value>
+  </data>
+  <data name="DecoyPage_DeploymentSubsectionTitle.Text" xml:space="preserve">
+    <value>Decoy Deployment Settings</value>
+  </data>
+  <data name="DecoyPage_DeploymentRatioText.Text" xml:space="preserve">
+    <value>Decoy/File Ratio</value>
+  </data>
+  <data name="DecoyPage_HealthText.Text" xml:space="preserve">
+    <value>Decoy Health</value>
+  </data>
+  <data name="DecoyPage_HealthTooltip.ToolTipService.ToolTip" xml:space="preserve">
+    <value>RANskril handles new folders by adding the top and bottom decoys. To keep the detection net effective, the system can perform folder reseeding and metadata resetting. The options below allow you to perform these operations manually.</value>
+  </data>
+  <data name="DecoyPage_DeploymentRatioTooltip.ToolTipService.ToolTip" xml:space="preserve">
+    <value>How many decoys will be created per number of files in the folder (excluding the top and bottom decoys). The default is 16. (i.e. for every 16 files in a folder, a decoy is created) A value of 0 will effectively disable dynamic decoy generation, and just leave the top and bottom decoys.</value>
+  </data>
+  <data name="DecoyPage_DeploymentApplyChangesButton.Content" xml:space="preserve">
+    <value>Apply Changes</value>
+  </data>
+  <data name="DecoyPage_MetadataButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>To keep the decoys looking 'fresh', this will set access and/or creation metadata closer to the present, with the oldest date being 3 days ago at most.</value>
+  </data>
+  <data name="DecoyPage_ReseedButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Taking into account the decoy/file ratio, this will regenerate all decoys. Depending on how many files are on the system, it might take a bit.</value>
+  </data>
+  <data name="DecoyPage_MetadataButton.Content" xml:space="preserve">
+    <value>Reset Decoy Metadata</value>
+  </data>
+  <data name="DecoyPage_ReseedButton.Content" xml:space="preserve">
+    <value>Reseed Folders</value>
+  </data>
+  <data name="DecoyPage_ExcludedFoldersSubsection.Text" xml:space="preserve">
+    <value>Decoy Excluded Folders Settings</value>
+  </data>
+  <data name="DecoyPage_ExcludedApplicationsSubsection.Text" xml:space="preserve">
+    <value>Decoy Application Visibility and Triggering Settings</value>
+  </data>
+  <data name="DecoyView_AddBlindExecutableButton.Content" xml:space="preserve">
+    <value>Add a blind executable</value>
+  </data>
+  <data name="DecoyView_AddExcludedExecutableButton.Content" xml:space="preserve">
+    <value>Add an excluded executable</value>
+  </data>
+  <data name="DecoyView_AddExcludedFolderButton.Content" xml:space="preserve">
+    <value>Add an excluded folder</value>
+  </data>
+  <data name="DecoyView_ViewBlindExecutablesButton.Content" xml:space="preserve">
+    <value>View all blind executables</value>
+  </data>
+  <data name="DecoyView_ViewBlindExecutablesButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>For a plethora of reasons, you can choose to make the decoys completely invisible to an application. Those applications can be seen here.</value>
+  </data>
+  <data name="DecoyView_ViewExcludedExecutablesButton.Content" xml:space="preserve">
+    <value>View all excluded executables</value>
+  </data>
+  <data name="DecoyView_ViewExcludedExecutablesButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Legitimate applications, that play nastily with the system, can be excluded. Those applications can be seen here.</value>
+  </data>
+  <data name="DecoyView_ViewExcludedFoldersButton.Content" xml:space="preserve">
+    <value>View all excluded folders</value>
+  </data>
+  <data name="DecoyView_ViewExcludedFoldersButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Some folders are excluded by default. The user can choose some folders to exclude. They can be seen here.</value>
+  </data>
+  <data name="DecoyPage_VisibilityAndExclusionSubsection.Text" xml:space="preserve">
+    <value>Decoy Application Visibility and Triggering Settings</value>
+  </data>
+  <data name="SettingsPage_Localization.Text" xml:space="preserve">
+    <value>Application Language</value>
+  </data>
+  <data name="SettingsPage_LocalizationDescription.Text" xml:space="preserve">
+    <value>You can press one of the buttons below to change the language of the application, to either English or Romanian. (NOTE: Logs will always be in English)</value>
+  </data>
+  <data name="SettingsPage_Title.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="DecoyPage_BlindExcludedSubtitle.Text" xml:space="preserve">
+    <value>Decoy-Executable Relation Settings</value>
+  </data>
+  <data name="DecoyPage_TriggerThresholdSubtitle.Text" xml:space="preserve">
+    <value>Decoy Trigger Strategy</value>
+  </data>
+  <data name="DecoyPage_ComboBoxLenient.Content" xml:space="preserve">
+    <value>Lenient</value>
+  </data>
+  <data name="DecoyPage_ComboBoxRestrictive.Content" xml:space="preserve">
+    <value>Restrictive</value>
+  </data>
+  <data name="DecoyPage_ComboBoxLenient.ToolTipService.ToolTip" xml:space="preserve">
+    <value>This will let in any executable that is digitally signed, passes the AMSI checks and ETW process tree checks.</value>
+  </data>
+  <data name="DecoyPage_ComboBoxRestrictive.ToolTipService.ToolTip" xml:space="preserve">
+    <value>This will let in only digitally signed executables, that belong to Microsoft. AMSI and ETW checks included.</value>
+  </data>
+  <data name="SettingsPage_Theme.Text" xml:space="preserve">
+    <value>Application Theme</value>
+  </data>
+  <data name="SettingsPage_ThemeDescription.Text" xml:space="preserve">
+    <value>You can press one of the buttons below to switch to either Light Mode or Dark Mode.</value>
+  </data>
+  <data name="LogsPage_ServiceTab.Content" xml:space="preserve">
+    <value>Windows Service Logs</value>
+  </data>
+  <data name="LogsPage_KernelTab.Content" xml:space="preserve">
+    <value>Kernel Minifilter Logs</value>
+  </data>
+  <data name="HomePage_Toggle.OffContent" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="HomePage_Toggle.OnContent" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="DecoyPage_DisarmSystem.Content" xml:space="preserve">
+    <value>Disarm System</value>
+  </data>
+  <data name="DecoyPage_DisarmSystem.ToolTipService.ToolTip" xml:space="preserve">
+    <value>This option will delete all decoys present on the machine, effectively preparing RANskril for uninstall.</value>
+  </data>
+</root>

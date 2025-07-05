@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="RANskril_GUI.Pages.DecoyPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RANskril_GUI.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    x:Name="DecoyPageDesign">
+
+    <Grid x:Name="RootGrid" Margin="36" RowSpacing="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Uid="DecoyPage_Title" Grid.Row="0" Margin="0,40,0,12" TextWrapping="WrapWholeWords" Style="{ThemeResource TitleLargeTextBlockStyle}"/>
+
+        <Grid Grid.Row="1"
+          Padding="16"
+          Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+          CornerRadius="{ThemeResource OverlayCornerRadius}"
+          HorizontalAlignment="Center"
+          VerticalAlignment="Stretch">
+
+            <ListView x:Name="DecoyViewer"
+                  MinWidth="480"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch" />
+        </Grid>
+
+        <Grid Grid.Row="2" x:Name="DecoyButtonsGrid" HorizontalAlignment="Center" VerticalAlignment="Top" ColumnSpacing="8">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" x:Name="ButtonReseedDecoys" x:Uid="DecoyPage_ReseedButton" Click="ButtonReseedDecoys_Click"/>
+            <Button Grid.Column="1" x:Name="ButtonResetMetadata" x:Uid="DecoyPage_MetadataButton" Click="ButtonResetMetadata_Click"/>
+            <Button Grid.Column="2" x:Name="ButtonDisarmSystem" x:Uid="DecoyPage_DisarmSystem" Click="ButtonDisarmSystem_Click"/>
+        </Grid>
+
+    </Grid>
+</Page>

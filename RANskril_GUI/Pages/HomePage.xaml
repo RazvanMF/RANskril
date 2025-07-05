@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="RANskril_GUI.Pages.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RANskril_GUI.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="RootGrid" Margin="36" RowSpacing="16" MaxWidth="1080">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Padding="16" Orientation="Vertical" Spacing="24" 
+                    Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" CornerRadius="{ThemeResource OverlayCornerRadius}"
+                    HorizontalAlignment="Center">
+            <Image x:Name="statusImage" Source="/Assets/mathematics-sign-minus-outline-icon.png" Height="192" Width="192"></Image>
+            <TextBlock x:Uid="HomePage_StatusTextUnknown" x:Name="statusText" TextAlignment="Center" Style="{ThemeResource TitleLargeTextBlockStyle}"></TextBlock>
+            <Grid Grid.Row="1" x:Name="ButtonsGrid" HorizontalAlignment="Center" VerticalAlignment="Top" ColumnSpacing="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Uid="HomePage_ButtonInfringe" x:Name="ButtonInfringe" Grid.Column="0" IsEnabled="False" Click="ButtonInfringe_Click"></Button>
+                <Button x:Uid="HomePage_ButtonRestart" x:Name="ButtonRestart" Grid.Column="1" IsEnabled="False" Click="ButtonRestart_Click"></Button>
+                <Button x:Uid="HomePage_ButtonRearm" x:Name="ButtonRearm" Grid.Column="2" IsEnabled="False" Click="ButtonRearm_Click"></Button>
+            </Grid>
+        </StackPanel>
+        <ToggleSwitch x:Name="ToggleSwitch" x:Uid="HomePage_Toggle" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom"></ToggleSwitch>
+    </Grid>
+</Page>

@@ -1,0 +1,11 @@
+/*
+#include <iostream>
+#include <thread>
+
+int main()
+{
+	system("taskkill /F /IM explorer.exe >nul 2>&1");
+	std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+	system("start explorer.exe >nul 2>&1");
+}
+*/

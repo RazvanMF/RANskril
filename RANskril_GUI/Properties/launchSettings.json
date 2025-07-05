@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "RANskril_GUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "RANskril_GUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

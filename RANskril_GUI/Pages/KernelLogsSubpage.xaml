@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="RANskril_GUI.Pages.KernelLogsSubpage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RANskril_GUI.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="RootGrid" Background="{ThemeResource CardBackgroundFillColorSecondaryBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <ScrollViewer x:Name="KernelConsoleScrollableWrapper" VerticalScrollBarVisibility="Auto" Padding="8" PointerEntered="KernelConsoleScrollableWrapper_PointerEntered" PointerExited="KernelConsoleScrollableWrapper_PointerExited">
+            <RichTextBlock x:Name="KernelConsole" Grid.Row="0" Grid.Column="0" FontFamily="Consolas" TextWrapping="Wrap">
+            </RichTextBlock>
+        </ScrollViewer>
+    </Grid>
+</Page>

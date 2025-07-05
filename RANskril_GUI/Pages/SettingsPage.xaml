@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="RANskril_GUI.Pages.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RANskril_GUI.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="RootGrid" Margin="36">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" x:Uid="SettingsPage_Title" Style="{ThemeResource TitleLargeTextBlockStyle}" Margin="0,40,0,36"/>
+
+        <ScrollViewer Grid.Row="1" Margin="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ZoomMode="Disabled" IsTabStop="True"
+              IsVerticalScrollChainingEnabled="True"
+              HorizontalScrollMode="Disabled" HorizontalScrollBarVisibility="Disabled" VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Auto">
+            <StackPanel Spacing="24">
+                <StackPanel Padding="16" Spacing="8" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" 
+                            CornerRadius="{ThemeResource OverlayCornerRadius}">
+                    <TextBlock x:Uid="SettingsPage_Localization" Margin="0,0,0,12" TextWrapping="WrapWholeWords" Style="{ThemeResource SubtitleTextBlockStyle}"/>
+                    <TextBlock x:Uid="SettingsPage_LocalizationDescription" TextWrapping="WrapWholeWords" Style="{ThemeResource BodyTextBlockStyle}"/>
+                    <StackPanel Orientation="Horizontal" Spacing="16">
+                        <Button x:Name="ButtonLangEN" Padding="8" Click="ButtonLangEN_Click">
+                            <Image Source="/Assets/en-us-flaglang.svg" Width="64" Height="48"/>
+                        </Button>
+                        <Button x:Name="ButtonLangRO" Padding="8" Click="ButtonLangRO_Click">
+                            <Image Source="/Assets/ro-ro-flaglang.svg" Width="64" Height="48"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Padding="16" Spacing="8" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" 
+                            CornerRadius="{ThemeResource OverlayCornerRadius}">
+                    <TextBlock x:Uid="SettingsPage_Theme" Margin="0,0,0,12" TextWrapping="WrapWholeWords" Style="{ThemeResource SubtitleTextBlockStyle}"/>
+                    <TextBlock x:Uid="SettingsPage_ThemeDescription" TextWrapping="WrapWholeWords" Style="{ThemeResource BodyTextBlockStyle}"/>
+                    <StackPanel Orientation="Horizontal" Spacing="16">
+                        <Button x:Name="ButtonThemeLight" Padding="8" Click="ButtonThemeLight_Click">
+                            <Image Source="/Assets/sun-icon.png" Width="48" Height="48"/>
+                        </Button>
+                        <Button x:Name="ButtonThemeDark" Padding="8" Click="ButtonThemeDark_Click">
+                            <Image Source="/Assets/moon-icon.png" Width="48" Height="48"/>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="HomePage_ButtonInfringe.Content" xml:space="preserve">
+    <value>Prezintă Aplicațiile Malițioase</value>
+  </data>
+  <data name="HomePage_ButtonRestart.Content" xml:space="preserve">
+    <value>Repornește în Modul Sigur</value>
+  </data>
+  <data name="HomePage_ButtonRearm.Content" xml:space="preserve">
+    <value>Rearmează Sistemul</value>
+  </data>
+  <data name="HomePage_ButtonEnable.Content" xml:space="preserve">
+    <value>Activează RANskril</value>
+  </data>
+  <data name="MainWindow_NavMenu_Decoys.Content" xml:space="preserve">
+    <value>Capcane</value>
+  </data>
+  <data name="MainWindow_NavMenu_Home.Content" xml:space="preserve">
+    <value>Acasă</value>
+  </data>
+  <data name="MainWindow_NavMenu_Logs.Content" xml:space="preserve">
+    <value>Jurnale</value>
+  </data>
+  <data name="MainWindow_NavMenu_Recovery.Content" xml:space="preserve">
+    <value>Recuperare</value>
+  </data>
+  <data name="HomePage_StatusTextSafe.Text" xml:space="preserve">
+    <value>Nu au fost detectate anomalii. Computer-ul dvs. este în siguranță.</value>
+  </data>
+  <data name="HomePage_StatusTextUnsafe.Text" xml:space="preserve">
+    <value>Sistemul a fost declanșat. Vă rugăm să investigați!</value>
+  </data>
+  <data name="HomePage_StatusTextUnknown.Text" xml:space="preserve">
+    <value>RANskril nu este pornit.</value>
+  </data>
+  <data name="HomePage_ButtonDisable_Content" xml:space="preserve">
+    <value>Dezactivează RANskril</value>
+  </data>
+  <data name="DecoyPage_Title.Text" xml:space="preserve">
+    <value>Vizualizator pentru Capcane</value>
+  </data>
+  <data name="DecoyPage_DeploymentSubsectionTitle.Text" xml:space="preserve">
+    <value>Setări de Implementare ale Capcanelor</value>
+  </data>
+  <data name="DecoyPage_DeploymentRatioText.Text" xml:space="preserve">
+    <value>Rația Capcană/Fișiere</value>
+  </data>
+  <data name="DecoyPage_HealthText.Text" xml:space="preserve">
+    <value>Bunăstarea Capcanelor</value>
+  </data>
+  <data name="DecoyPage_HealthTooltip.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Când un director nou este creat, RANskril adaugă capcanele periferice în acesta. Pentru a păstra sistemul de detecție cât mai eficient, serviciul poate executa operații de regenerare ale capcanelor, și de resetare a metadatelor. Opțiunile de mai jos permit utilizatorului să execute manual operațiile.</value>
+  </data>
+  <data name="DecoyPage_DeploymentRatioTooltip.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Cât de multe capcane vor fi create, în funcție de numărul de fișiere din director (excluzând capcanele periferice). Valoarea implicită este 16 (i.e. pentru fiecare 16 fișiere dintr-un director, se va crea o capcană). Valoarea '0' va dezactiva generarea dinamică a capcanelor, în funcție de numărul de fișiere, și va lăsa doar capcanele periferice.</value>
+  </data>
+  <data name="DecoyPage_DeploymentApplyChangesButton.Content" xml:space="preserve">
+    <value>Aplică schimbările</value>
+  </data>
+  <data name="DecoyPage_MetadataButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Pentru a face capcanele să pară 'proaspete', operația aceasta va modifica metadatele specifice ultimei dăți accesate și/sau data creării. Data modificată nu va fi mai veche de 3 zile.</value>
+  </data>
+  <data name="DecoyPage_ReseedButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Luând în considerare rația capcană/fișiere, opțiunea aceasta va regenera toate capcanele din sistem. Operația poate dura, în funcție de numărul de fișiere.</value>
+  </data>
+  <data name="DecoyPage_MetadataButton.Content" xml:space="preserve">
+    <value>Resetează Metadatele Capcanelor</value>
+  </data>
+  <data name="DecoyPage_ReseedButton.Content" xml:space="preserve">
+    <value>Regenerează Capcane</value>
+  </data>
+  <data name="DecoyPage_ExcludedFoldersSubsection.Text" xml:space="preserve">
+    <value>Setări de Excludere de Directoare ale Capcanelor</value>
+  </data>
+  <data name="DecoyPage_ExcludedApplicationsSubsection.Text" xml:space="preserve">
+    <value>Setări de Vizibilitate și Declanșare ale Capcanelor</value>
+  </data>
+  <data name="DecoyView_AddBlindExecutableButton.Content" xml:space="preserve">
+    <value>Adaugă un executabil orb</value>
+  </data>
+  <data name="DecoyView_AddExcludedExecutableButton.Content" xml:space="preserve">
+    <value>Adaugă un executabil exclus</value>
+  </data>
+  <data name="DecoyView_AddExcludedFolderButton.Content" xml:space="preserve">
+    <value>Adaugă un director exclus</value>
+  </data>
+  <data name="DecoyView_ViewBlindExecutablesButton.Content" xml:space="preserve">
+    <value>Vizualizează executabilele oarbe</value>
+  </data>
+  <data name="DecoyView_ViewBlindExecutablesButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Pentru o multitudine de motive, puteți alege executabile pentru care capcanele să fie invizibile. Aceste executabile pot fi văzute aici.</value>
+  </data>
+  <data name="DecoyView_ViewExcludedExecutablesButton.Content" xml:space="preserve">
+    <value>Vizualizează executabilele excluse</value>
+  </data>
+  <data name="DecoyView_ViewExcludedExecutablesButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Există posibilitatea ca unele aplicații legitime să nu interacționeze frumos cu sistemul, și să fie excluse. Acele aplicații excluse pot fi văzute aici.</value>
+  </data>
+  <data name="DecoyView_ViewExcludedFoldersButton.Content" xml:space="preserve">
+    <value>Vizualizează directoarele excluse</value>
+  </data>
+  <data name="DecoyView_ViewExcludedFoldersButton.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Unele directoare sunt implicit excluse. Utilizatorul poate deasemenea să excludă directoare. Directoarele excluse pot fi văzute aici.</value>
+  </data>
+  <data name="DecoyPage_VisibilityAndExclusionSubsection.Text" xml:space="preserve">
+    <value>Setări de Vizibilitate și Declanșare ale Capcanelor</value>
+  </data>
+  <data name="SettingsPage_Localization.Text" xml:space="preserve">
+    <value>Limba Aplicației</value>
+  </data>
+  <data name="SettingsPage_LocalizationDescription.Text" xml:space="preserve">
+    <value>Puteți apăsa unul din butoanele de mai jos pentru a schimba limba aplicației, fie în Engleză, fie în Română. (NOTĂ: Jurnalele vor fi mereu în Engleză)</value>
+  </data>
+  <data name="SettingsPage_Title.Text" xml:space="preserve">
+    <value>Setări</value>
+  </data>
+  <data name="DecoyPage_BlindExcludedSubtitle.Text" xml:space="preserve">
+    <value>Setări Relație Capcană-Executabile</value>
+  </data>
+  <data name="DecoyPage_TriggerThresholdSubtitle.Text" xml:space="preserve">
+    <value>Strategie pentru Declanșarea Capcanelor</value>
+  </data>
+  <data name="DecoyPage_ComboBoxLenient.Content" xml:space="preserve">
+    <value>Permisiv</value>
+  </data>
+  <data name="DecoyPage_ComboBoxRestrictive.Content" xml:space="preserve">
+    <value>Restrictiv</value>
+  </data>
+  <data name="DecoyPage_ComboBoxLenient.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Opțiunea asta va permite execuția oricărui executabil semnat digital, dacă trece și de verificările AMSI și ETW.</value>
+  </data>
+  <data name="DecoyPage_ComboBoxRestrictive.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Opțiunea asta va permite execuția doar programelor semnate digital, și care aparțin de Microsoft. Verificările AMSI și ETW sunt incluse.</value>
+  </data>
+  <data name="SettingsPage_Theme.Text" xml:space="preserve">
+    <value>Tema Aplicației</value>
+  </data>
+  <data name="SettingsPage_ThemeDescription.Text" xml:space="preserve">
+    <value>Puteți apăsa unul din butoanele de mai jos pentru a schimba tema aplicației, fie în modul luminos, fie în modul întunecat.</value>
+  </data>
+  <data name="LogsPage_ServiceTab.Content" xml:space="preserve">
+    <value>Jurnalele Serviciului Windows</value>
+  </data>
+  <data name="LogsPage_KernelTab.Content" xml:space="preserve">
+    <value>Jurnalele Minifiltrului pe Kernel</value>
+  </data>
+  <data name="HomePage_Toggle.OffContent" xml:space="preserve">
+    <value>Pornit</value>
+  </data>
+  <data name="HomePage_Toggle.OnContent" xml:space="preserve">
+    <value>Pornit</value>
+  </data>
+  <data name="DecoyPage_DisarmSystem.Content" xml:space="preserve">
+    <value>Dezarmează Sistemul</value>
+  </data>
+  <data name="DecoyPage_DisarmSystem.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Opțiunea aceasta va șterge toate capcanele de pe sistem, pregătind astfel RANskril pentru dezinstalare.</value>
+  </data>
+</root>
