@@ -1,0 +1,124 @@
+
+# RANskril: Real-Time, Kernel-Based Ransomware Detection and Protection Solution
+
+![Platform](https://img.shields.io/badge/platform-Windows_11-blue) ![Language](https://img.shields.io/badge/language-C++%20%7C%20C%23-blueviolet) ![Status](https://img.shields.io/badge/status-Completed-success)
+
+A kernel-level ransomware detection and protection solution for Windows 11, built as part of my Bachelor's Thesis.
+
+
+## Description
+RANskril is a real-time ransomware detection and protection system for Windows 11, designed as the practical part of my Bachelor's Thesis.  
+
+RANskril's protection mechanism is based on canary files ("decoys"), which are protected by the program at the kernel level. Any attempt to tamper with these files will trigger a response that has to be evaluated by the service before the program is allowed to continue its execution.
+
+From a technical point of view, the application was built like this to better understand the inner workings of Windows, like the kernel, services, the registry, and
+inter-process communication.
+
+
+## Architecture
+
+RANskril consists of 3 components.
+- `DecoyMon` *(C/C++, Windows Driver Kit)*: A kernel minifilter driver that implements pre-callbacks and post-callbacks for issued IRPs. The driver's task is to accept or reject the IRP, based on `RANskril CORE`'s verdict.
+- `RANskril CORE` *(C++, Win32 API)*: A Windows Service, whose main purpose is to retrieve information from `DecoyMon`, process it, and return a verdict. The service also handles canary/decoy creation and management, application state and component communication.
+- `RANskril GUI` *(C#/XAML, WinUI3)*: A graphical user interface which allows the user to enable or disable protection, see decoys and observe application logs.
+
+
+## Requirements
+For compiling the repository, Visual Studio 2022 (at least) is advised.
+
+- `DecoyMon` requires the Windows Driver Kit to compile properly. Information can be found [here](https://learn.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk)
+- `RANskril CORE` requires the "Desktop development with C++" Visual Studio workload to compile properly.
+- `RANskril GUI` requires the "Windows application development" Visual Studio workload to compile properly.
+
+
+## Installation and Startup
+
+After compilation, both `DecoyMon` and `RANskril CORE` are installed with the help of `sc.exe`.
+```
+DecoyMon: sc.exe create decoymon type=filesys [start=system] binpath=<.sys_FILE_LOCATION>
+RANskril CORE: sc.exe create ranskrilcore type=own [start=auto] binpath=<.exe_FILE_LOCATION>
+```
+Removal is handled similarly.
+```
+DecoyMon: sc.exe delete decoymon
+RANskril CORE: sc.exe delete ranskrilcore
+```
+The user can turn on/off the components manually like this:
+```
+DecoyMon: sc.exe start/stop decoymon
+RANskril CORE: sc.exe start/stop ranskrilcore
+```
+
+
+`RANskril GUI` is started from the executable compiled in the build directory, `RANskril_GUI.exe`.
+
+
+## Features
+### `DecoyMon`
+- Communicates with `RANskril CORE` via I/O Control Codes and Win32 API Filter Ports.
+- Receives at `RANskril CORE`'s startup a list of paths pointing to the decoy files, a list of whitelisted directories and a list of directories containing decoys. Decoy file and directory paths are saved within a hash table, while whitelisted directories are saved inside a linked list.
+- Implements pre- and post-callbacks for issued I/O Request Packets. The IRPs must correspond to one of the following operations: Create, Read, Write, Memory Map, Set Information (i.e. Move, Rename, Delete), Cleanup (i.e. Delete).
+- Hides the decoys from the user inside Windows Explorer by manipulating information within `DIRECTORY_QUERY` IRPs.
+- Accepts or rejects IRPs based on information retrieved from `RANskril CORE` over the filter port.
+- Logs information via ETW (TraceLogging).
+### `RANskril CORE`
+- Communicates with `DecoyMon` via I/O Control Codes and Win32 API Filter Ports.
+- Communicates with `RANskril GUI` via three Named Pipes (one for notifying the GUI, one for receiving information from the GUI and one duplex for status pings).
+- Is responsible for creating and maintaining decoy files. Decoy files are created at initialization, with their paths saved in the Windows Registry (HKLM hive). Subsequent starts will only refresh decoy metadata. Decoys can be deleted (and recreated) by the service. Sends the decoy paths, decoy directory paths and whitelisted directory paths to `DecoyMon`.
+- Awaits information from `DecoyMon`. At arrival, `RANskril CORE` has a PID corresponding to the process that has issued the infringing operation. The service makes use of `Event Tracing for Windows` to create a process chain, starting from the received PID. All processes from the chain are then analyzed with `WinVerifyTrust` and `AMSI` for integrity. If one process fails the check, all processes are terminated. In case Windows Explorer is part of the chain, it'll be restarted.
+- Depending on the analysis result, `RANskril CORE` instructs `DecoyMon` to accept or deny the IRP. Also, the service signals a status change within `RANskril GUI`.  
+- Logs information via ETW (TraceLogging).
+### `RANskril GUI`
+- Communicates with `RANskril CORE` via three Named Pipes (one for getting notifications from the service, one for sending information from the GUI and one duplex for status pings).
+- The `Home` page enables the user to:
+    - Turn off the protection
+    - Restart the machine into Safe Mode
+    - Check the list of infringing processes
+    - Reset application status
+- The `Logs` page enables the user to:
+    - Check `DecoyMon`'s ETW logs
+    - Check `RANskril CORE`'s ETW logs
+- The `Decoy` page enables the user to:
+    - See the list of all decoys present on the system
+    - Refresh decoy metadata
+    - Delete all decoys
+    - Regenerate all decoys
+- The `Settings` page enables the user to:
+    - Change the application's language to either English or Romanian
+    - Change the application's theme to either Light or Dark
+
+
+## Images
+### RANskril's Operational Loop
+![mo](https://github.com/RazvanMF/repository-images/blob/main/ranskril/ranskrilMO.png?raw=true)
+
+### RANskril's Communication Components
+![communication](https://github.com/RazvanMF/repository-images/blob/main/ranskril/ranskrilcomm.png?raw=true)
+
+### RANskril CORE's Detection Prompt
+![prompt](https://github.com/RazvanMF/repository-images/blob/main/ranskril/prompt.png?raw=true)
+
+### RANskril GUI's Home Screen
+![home screen](https://github.com/RazvanMF/repository-images/blob/main/ranskril/home.png?raw=true)
+
+### RANskril GUI's Alternate Home Screen
+![home screen alt](https://github.com/RazvanMF/repository-images/blob/main/ranskril/homedarkmodelangromanian.png?raw=true)
+
+### RANskril GUI's Home Screen - Tripped State
+![tripped](https://github.com/RazvanMF/repository-images/blob/main/ranskril/trippedscreen.png?raw=true)
+
+### RANskril GUI's Home Screen - Off State
+![tripped](https://github.com/RazvanMF/repository-images/blob/main/ranskril/offscreen.png?raw=true)
+
+### RANskril GUI's Decoy Screen
+![decoys](https://github.com/RazvanMF/repository-images/blob/main/ranskril/decoys.png?raw=true)
+
+### RANskril GUI's Logs Screen
+![logs](https://github.com/RazvanMF/repository-images/blob/main/ranskril/servicelogs.png?raw=true)
+
+
+## Acknowledgements
+Throughout the development of this application, the following resources were invaluable:
+- ["Windows Kernel Programming, Second Edition" | Pavel Yosifovich](https://leanpub.com/windowskernelprogrammingsecondedition)
+- ["Windows Internals, Seventh Edition (Part 1): System architecture, processes, threads, memory management, and more" | Pavel Yosifovich, Mark E. Russinovich, David A. Solomon, Alex Ionescu](https://www.amazon.com/Windows-Internals-Part-architecture-management/dp/0735684189)
+- ["Windows Internals, Seventh Edition (Part 2)" |  Andrea Allievi, Mark Russinovich, Alex Ionescu, David Solomon](https://www.amazon.com/Windows-Internals-Part-2-7th/dp/0135462401)
